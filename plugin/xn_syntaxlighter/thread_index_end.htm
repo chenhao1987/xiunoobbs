@@ -1,0 +1,9 @@
+<script>
+// 语法高亮
+if($('pre').length > 0) {
+	xiuno_load_css('plugin/xn_syntaxlighter/syntax.css');
+	$.xload('plugin/xn_syntaxlighter/syntax.js', function() {
+		SyntaxHighlighter.all();
+	});
+}
+</script>

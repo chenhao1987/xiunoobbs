@@ -1,0 +1,83 @@
+<!--{include header.htm}-->
+
+<!--{hook index_index_start.htm}-->
+
+<div class="width">
+
+	<!--{hook index_index_nav_before.htm}-->
+	
+	<table id="nav" cellpadding="0" cellspacing="0" style="margin-bottom: 4px;">
+		<tr>
+			<td class="left"></td>
+			<td class="center">
+				<a class="icon icon-home" href="./"></a>
+				<span class="sep"></span>
+				<!--{hook common_nav_center.htm}-->
+				<span>最新帖</span>
+				<!--{hook index_index_nav_center_after.htm}-->
+			</td>
+			<td class="center2">
+				<!--{include header_user.inc.htm}-->
+				<a href="?post-thread-fid-$fid-ajax-1.htm" target="_blank" onclick="return false;" id="create_thread"  rel="nofollow"><span class="icon icon-post-newthread"></span> 发新帖</a>
+			</td>
+			<td class="right"></td>
+		</tr>
+	</table>
+	
+	<!--{hook index_index_nav_after.htm}-->
+	
+	<!--{require thread_list.inc.htm}-->
+	
+	<!--{hook index_thread_list_after.htm}-->
+	
+	<div class="div">
+		<div class="header"><span class="icon icon-stat"></span> 站点统计</div>
+		<div class="body">
+			<div style="margin-top: 8px; line-height: 12px; margin-bottom: 4px;">
+				<!--{hook index_index_stat_start.htm}-->
+				<span class="grey">帖子：</span><span>$conf[posts]</span> <span class="small grey2">|</span>
+				<span class="grey">会员：</span><span>$conf[users]</span>
+				<!--{if $conf[todayposts]}-->
+				<span class="small grey2">|</span>
+				<span class="grey">今日发帖：</span><span class="new bold">$conf[todayposts]</span>
+				<!--{/if}-->
+				<!--{if $conf[todayusers]}-->
+				<span class="small grey2">|</span>
+				<span class="grey">今日注册：</span><span class="new bold">$conf[todayusers]</span>
+				<!--{/if}-->
+				<!--{if $conf[newusername]}-->
+				<span class="small grey2">|</span>
+				<span class="grey">新会员:</span> <a href="?you-profile-uid-$conf[newuid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" rel="nofollow">$conf[newusername]</a>
+				<!--{/if}-->
+				<span class="small grey2">|</span>
+				<span class="grey">在线：</span><span class="new bold"><a href="?online-list-ajax-1.htm" class="ajaxdialog" onclick="return false;">$conf[onlines]</a></span>
+				<!--{hook index_index_stat_end.htm}-->
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+	
+	<!--{hook index_index_stat_after.htm}-->
+	
+</div>
+
+<!--{hook index_index_footer_before.htm}-->
+
+<!--{include footer.htm}-->
+
+<!--{require thread_list_js.inc.htm}-->
+
+<script type="text/javascript">
+$('#friendlink_img img').hover(function() {$(this).removeClass('xgrey')}, function() {$(this).addClass('xgrey')});
+$('div.div div.body').find('div.hr:last').hide();// 隐藏最后一个 hr
+
+// 鼠标背景变色
+$('table.forum').bind('mouseover', function() {$('td:gt(0)', this).removeClass('bg1').addClass('bg2');});
+$('table.forum').bind('mouseout', function() {$('td:gt(0)', this).removeClass('bg2').addClass('bg1');});
+
+</script>
+
+<!--{hook index_index_end.htm}-->
+
+</body>
+</html>
