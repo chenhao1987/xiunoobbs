@@ -23,7 +23,7 @@ return array(
 				'host' => 'localhost',								
 				'user' => 'root',				
 				'password' => 'chenhao1987@test',				
-				'name' => 'bbs',				
+				'name' => 'test',				
 				'charset' => 'utf8',				
 				'tablepre' => 'bbs_',								
 				'engine'=>'MyISAM',
@@ -84,10 +84,10 @@ return array(
 	'app_id' => 'bbs',
 	
 	// 应用的绝对路径： 如: http://www.domain.com/bbs/
-	'app_url' => 'http://115.28.220.78/',
+	'app_url' => 'http://www.codhome.com/',
 	
 	// CDN 缓存的静态域名，如 http://static.domain.com/
-	'static_url' => 'http://115.28.220.78/',
+	'static_url' => 'http://www.codhome.com/',
 	
 	// CDN IP 列表，设置以后，IP 地址的获取将以 X-FORWARD-FOR 为准，多个IP格式：array('192.168.1.1', '192.168.1.2', '192.168.1.3', '202.100.1.*')
 	'cdn_ip' => array(),
@@ -117,9 +117,9 @@ return array(
 	'upload_path' => BBS_PATH.'upload/',
 	
 	// 模板的URL，用作CDN时请填写绝对路径，需要时，填写绝对路径： 如: http://www.domain.com/bbs/upload/, SAE: http://xxx-upload.stor.sinaapp.com/1.txt  (建立 upload 域，安装的时候需要设置)
-	'upload_url' => 'http://115.28.220.78/upload/',
+	'upload_url' => 'http://www.codhome.com/upload/',
 	
-	'logo_url' => 'http://115.28.220.78/',
+	'logo_url' => 'http://www.codhome.com/',
 	
 	// 日志目录，需要可写
 	'log_path' => BBS_PATH.'log/',
@@ -128,7 +128,7 @@ return array(
 	'plugin_path' => BBS_PATH.'plugin/',
 	
 	// 插件目录对应的URL
-	'plugin_url' => 'http://115.28.220.78/plugin/',
+	'plugin_url' => 'http://www.codhome.com/plugin/',
 	
 	'plugin_disable'=>0,			// 禁止掉所有插件
 	
@@ -141,7 +141,7 @@ return array(
 	// ------------------> 以下为 BBS 相关:
 	
 	// 点击服务器
-	'click_server' => 'http://115.28.220.78/service/clickd/',	// 记录主题点击数，论坛点击数
+	'click_server' => 'http://www.codhome.com/service/clickd/',	// 记录主题点击数，论坛点击数
 	
 	// 加密KEY，
 	'auth_key' => 'd3802942b6fcb2069fcf3c9553e455ad',

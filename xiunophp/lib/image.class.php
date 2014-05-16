@@ -161,8 +161,8 @@ class image {
 		$dir1 = $dir.$s1;
 		$dir2 = $dir."$s1/$s2";
 
-		!is_dir($dir1) && mkdir($dir1);
-		!is_dir($dir2) && mkdir($dir2);
+		!is_dir($dir1) && mkdir($dir1,0777,true);
+		!is_dir($dir2) && mkdir($dir2,0777,true);
 		return "$s1/$s2";
 	}
 

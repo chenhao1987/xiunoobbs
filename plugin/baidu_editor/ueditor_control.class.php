@@ -123,6 +123,9 @@ class ueditor_control extends common_control {
 			is_file($file['tmp_name']) && unlink($file['tmp_name']);
 			
 			$title = htmlspecialchars(core::gpc('pictitle', 'P'));
+			
+			// hook ueditor_attach_uploadimage_after.php
+			
 			echo "{'url':'" . $uploadurl.$arr['filename'] . "','title':'" . $title . "','original':'" . $file['name'] . "','state':'SUCCESS'}";
 			exit;
 		} else {
