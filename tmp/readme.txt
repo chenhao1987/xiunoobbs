@@ -1,1 +1,0 @@
-this dir can not be deleted!
