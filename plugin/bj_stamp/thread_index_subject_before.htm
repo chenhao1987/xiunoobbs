@@ -1,0 +1,17 @@
+<!--{if $thread[firstpid] == $post[pid]}-->
+    <!--{php $num = $_stamp[right]}-->
+    <!--{php $top = $_stamp[top] ? 'top:'.$_stamp[top].'px' : '' }-->
+    <div id="threadstamp">
+    <!--{if $thread[digest] != 0}-->
+        <img style="position: absolute;right: <!--{php echo $num}-->px;<!--{php echo $top}-->" src="plugin/bj_stamp/images/001.gif" title="精华" />
+        <!--{php $num += (150 + $_stamp[spacing])}-->
+    <!--{/if}-->
+    <!--{if $thread[top] != 0}-->
+        <img style="position: absolute;right: <!--{php echo $num}-->px;<!--{php echo $top}-->" src="plugin/bj_stamp/images/002.gif" title="置顶" />
+        <!--{php $num += (150 + $_stamp[spacing])}-->
+    <!--{/if}-->
+    <!--{if $thread[posts] > $conf[threadlist_hotviews]}-->
+        <img style="position: absolute;right: <!--{php echo $num}-->px;<!--{php echo $top}-->" src="plugin/bj_stamp/images/003.gif" title="热帖" />
+    <!--{/if}-->
+    </div>
+<!--{/if}-->

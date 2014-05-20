@@ -1,0 +1,14 @@
+<!--{if $_stamp}-->
+<style type="text/css">
+    #threadstamp {
+        position: relative;
+        width: 100%;
+        height: 0;
+        overflow: visible;
+        filter:alpha(opacity=$_stamp[opacity]);
+        -moz-opacity: <!--{php echo $_stamp[opacity] / 100}-->;
+        -khtml-opacity: <!--{php echo $_stamp[opacity] / 100}-->;
+        opacity: <!--{php echo $_stamp[opacity] / 100}-->;
+    }
+</style>
+<!--{/if}-->
