@@ -22,7 +22,7 @@ return array(
 			'master' => array(								
 				'host' => 'localhost',								
 				'user' => 'root',				
-				'password' => 'chenhao1987@test',				
+				'password' => '******',				
 				'name' => 'bbs',				
 				'charset' => 'utf8',				
 				'tablepre' => 'bbs_',								
