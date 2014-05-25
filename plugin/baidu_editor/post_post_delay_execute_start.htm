@@ -29,7 +29,7 @@ $.xload('plugin/baidu_editor/ueditor/ueditor.config.js', 'plugin/baidu_editor/ue
 		
 		// 快捷键相应
 		editor.body.onkeydown = function(e) {
-			if((e.ctrlKey && (e.which == 13 || e.which == 10)) || (e.altKey && e.which == 83)) {
+			if((e && e.ctrlKey && (e.which == 13 || e.which == 10)) || (e && e.altKey && e.which == 83)) {
 				editor.sync();
 				$('#post_submit_$pid').trigger('click');
 			}
