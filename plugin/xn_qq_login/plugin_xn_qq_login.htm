@@ -1,0 +1,49 @@
+<!--{include header.htm}-->
+
+<div class="width">
+	<form action="?plugin-setting-dir-$dir.htm" method="post" id="conf_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="div" style="width: 700px;">
+			<div class="header">设置</div>
+			<div class="body">
+				<dl>
+					<dt><label for="enable">是否开启QQ登陆：</label></dt>
+					<dd>$input[enable]</dd>
+				
+					<dt><label for="meta">认证的meta标签：</label></dt>
+					<dd>$input[meta]</dd>
+					
+					<dt><label for="appid">APPID：</label></dt>
+					<dd>$input[appid]</dd>
+				
+					<dt><label for="appkey">APPKEY：</label></dt>
+					<dd>$input[appkey]</dd>
+				
+					<dt></dt>
+					<dd>
+						<input type="submit" class="button bigblue" id="conf_submit" value="确定" />
+						<input type="button" class="button biggrey" value="返回" onclick="window.location='?plugin-list.htm'" />
+						<div id="notice" class="notice" style="display: none;"></div>
+					</dd>
+					
+					<dt></dt>
+					<dd>
+						<p>QQ登陆申请地址：<a href="http://connect.qq.com/intro/login/" target="_blank">http://connect.qq.com/intro/login/</a></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--{include footer.htm}-->
+
+<script type="text/javascript">
+$('#conf_submit').click(function() {
+	$('#conf_form').submit();
+	return false;
+});
+
+</script>
+</body>
+</html>
